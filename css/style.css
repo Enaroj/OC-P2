@@ -19,7 +19,7 @@ header {
 }
 
 #logo {
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px 30px 0px;
     width: 61px;
     height: 19px;
 }
@@ -66,13 +66,59 @@ a {
     font-size: 22px;
 }
 
-.fa-location-dot {
+.info-group{
+    margin: 20px 0px ;
+}
+
+.form {
+    display: flex;
+}
+
+#form_localisation {
     background-color: #F2F2F2;
-    color:black;
-    border-radius: 15px, 0px, 0px, 15px;
-    padding: 5px 5px;
     width: 25px;
-    height: 20px;
+    height: 21PX; 
+    padding: 5px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+input[type="text"]{
+    text-align: center;
+    color: black;
+    border-color: #F2F2F2;
+    border-width: thin;
+    border-top-style: solid;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    height: 94%;
+    padding: 0px;
+}
+
+#form_button{
+    color: #FFFFFF;
+    padding: 5px;
+    background-color: #0065FC;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.fa-location-dot {
+    color:black;
+    display: flex;
+    justify-content: center;
+}
+
+.filter{
+    font-weight: 700;
+    font-size:small;
+    display: flex;
+}
+
+.filter-type{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border-color:black;
 }
 
 
