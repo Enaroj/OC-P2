@@ -1,3 +1,4 @@
+/***************************/
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
@@ -12,6 +13,55 @@
 .fa-solid {
     color: var(--main-color);
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/**************************/
+/****** Header ***********/
 
 header {
     display: flex;
@@ -38,49 +88,37 @@ nav a:hover{
     color: #0065FC;
 }
 
-/* nav a:visited{
-    border-top: 2px #0065FC solid;
-    color: #0065FC;
-}  */
-
-body {
-    display: flex;
-    justify-content: center;
-    margin: 2px;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
+/******************************/
+/****** Info group ***********/
 .info-group{
     margin: 20px 0px ;
 }
 
+/****** Formulaire ***********/
 .form {
     display: flex;
     margin: 20px 0px;
+    border-color: #F2F2F2;
+    border-width: 1px;
+    border-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    width: fit-content;
 }
 
-#form_localisation {
+#form-localisation {
     background-color: #F2F2F2;
-    width: 25px;
-    height: 21PX; 
-    padding: 5px;
-    border-radius: 10px 0px 0px 10px;
+    width: 50px;
+    height: 50px;
+    /* padding: 5px; */
+    border-radius: 15px 0px 0px 15px;
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .fa-location-dot {
@@ -89,36 +127,43 @@ a {
     justify-content: center;
 }
 
+.form-search {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 input[type="text"]{
-    text-align: center;
     color: black;
-    border-color: #F2F2F2;
-    border-width: thin;
-    border-top-style: solid;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    height: 94%;
-    padding: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    border-style: hidden;
+    padding-left: 10px;
 }
 
 #form_button_text{
     visibility: visible;
     color: #FFFFFF;
-    padding: 5px;
+    font-size: 18px;
+    height: 50px;
+    font-weight: 700;
+    padding: 15px;
     background-color: #0065FC;
     border: none;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 15px 15px 0px;
 }
 
 
 .form_button_icon{
-    visibility: collapse;
+    /* display:none fait disparaitre l'élément de la page html */
+    display: none;
     border: 0;
-    line-height: 2.5;
-    padding: 0 10px;
+    width: 50px;
+    padding: 15px 16px;
     text-align: center;
     color: #fff;
-    border-radius: 10px;
+    font-size: 17px;
+    border-radius: 15px;
     background-color:#0065FC;
     box-shadow:
         0px 2px 2px rgba(255, 255, 255, 0.6),
@@ -129,50 +174,67 @@ input[type="text"]{
     color: white;
 }
 
+/****** Filtres ***********/
+
 .filter{
     font-weight: 700;
-    font-size:small;
+    font-size:17px;
     display: flex;
+    align-items: center;
+}
+
+.filter-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .filter-type{
     display: flex;
-    flex-direction: row;
     border:solid;
+    border-width:2px;
     border-radius: 30px;
-    border-color:black;
-    padding: 0px 10px;
+    border-color:#F2F2F2;
+    padding: 0px 15px;
 }
 
-.fa-money-bill-wave{
+.filter-type:hover{
+    background-color: #DEEBFF;
+}
+
+/* .fa-money-bill-wave{
     color: black;
     display: flex;
     align-content: center;
+} */
+
+.icon {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 0px 0px;
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+/****** Info ***********/
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.card img {
-    object-fit: cover;
+.info-icon {
+    border:solid;
+    border-width:2px;
+    border-radius: 50%;
+    border-color:#F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: 0px 10px 0px 0px;
 }
 
-.card-title {
-    font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color)
-}
-
+/***********************************************/
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -184,11 +246,58 @@ input[type="text"]{
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    height: fit-content;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hebergements-cards a {
+    width: 30%;
+}
+
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 33px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 120px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    padding: 0px 10px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin: 5px 0px;
+}
+
+.hebergements h3 {
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 /****** Populaires ***********/
@@ -275,6 +384,17 @@ input[type="text"]{
         font-size: 13px;
     }
 
+/* Filtres */
+
+    .filter{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-type {
+        margin: 0px 10px 0px 0px ;
+    }
 
 }
 
@@ -285,11 +405,17 @@ input[type="text"]{
     .main-container {
         padding: 0px;
     }
-    
+
+/* Header */
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Alligne le logo au centre */
+    #logo {
+        padding: 30px 00px 30px 0px;
     }
     
     nav {
@@ -305,22 +431,48 @@ input[type="text"]{
         margin: 0px;
     }
 
+    /* Change la barre de la section seléctionnée du haut vers le bas */
     nav a:hover{
         border-bottom: 2px #0065FC solid;
         border-top: none;
         color: #0065FC;
     }
 
+    .info-group{
+        margin: 20px 10px;
+    }
+
+/* Formulaire */
     .form{
-        width: 100%;
         display: flex;
     }
 
+    /* Change l'apparence du bouton recherche de texte à icone sur mobile */
     .form_button_icon{
-        visibility: visible;
+        display: inline;
     }
 
     #form_button_text{
-        visibility: collapse;
+        display: none;
+    }
+
+/* Filtres */
+    .filter {
+        display: flex;
+        align-items: flex-start;
+   }
+
+    .filter-block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .filter-type{
+        margin: 5px;
+        width: 37%;
+        padding-left: 15px;
     }
 }
+
