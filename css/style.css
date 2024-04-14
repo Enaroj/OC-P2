@@ -34,7 +34,7 @@ a {
 
 .section-title {
     margin: 0;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 .card {
@@ -258,6 +258,11 @@ div.filter-type:hover{
     flex-direction: column;
 }
 
+.afficher-plus {
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
@@ -266,12 +271,16 @@ div.filter-type:hover{
 
 .hebergements-cards a {
     width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
     margin-top: 33px;
+    width: 100%;
 }
 
 .hebergements-cards img {
@@ -381,6 +390,7 @@ div.filter-type:hover{
     justify-content: space-between;
     padding: 0px;
     width: 100%;
+    height: 100%;
 }
 
 .activites-cards img {
@@ -398,6 +408,7 @@ div.filter-type:hover{
         display: flex;
         align-content: center;
         flex-wrap: wrap;
+        height: 59px;
     } 
 
 
@@ -411,13 +422,14 @@ footer {
     width: 100%;
 }
 
-.footer {
+.foot-section {
     width: 30%;
     padding: 0px 20px;
 }
 
-.footer h3 {
+.foot-section p {
     font-size: 18px;
+    font-weight: 700;
 }
 
 ul {
@@ -483,16 +495,12 @@ li {
 
 /* Activités */
 
-    .activites-cards {
-        max-height: 270px;
-    }
-
     .activites-cards img {
-        height: 75%;
+        height: 200px;
     }
 
     .activites-cards .card-content {
-        height: 25%;
+        height: 70px;
     } 
 
 }
@@ -635,7 +643,7 @@ li {
 
     }
 
-    .footer {
+    .foot-section {
         width: 90%;
         padding: 5px 0px 5px 20px;
     }
